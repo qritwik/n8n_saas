@@ -212,9 +212,9 @@ def create_workflow():
         return redirect(url_for('dashboard'))
 
 
-@app.route("/disconnect-gmail", methods=["POST"])
+@app.route("/disconnect-gmail-delete-workflow", methods=["POST"])
 @login_required
-def disconnect_gmail():
+def disconnect_gmail_delete_workflow():
     """Disconnect Gmail account and delete workflow"""
     user_id = session['user_id']
     
