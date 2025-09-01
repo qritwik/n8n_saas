@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; text-align: center; }
+        .error { background: #f8d7da; color: #721c24; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #f5c6cb; }
+        .btn { display: inline-block; padding: 15px 30px; background: #dc3545; color: white; text-decoration: none; border-radius: 5px; margin: 10px; }
+        .btn:hover { background: #c82333; }
+    </style>
+</head>
+<body>
+    <div class="error">
+        <h1>❌ Error</h1>
+        <p><strong>{{ error }}</strong></p>
+    </div>
+
+    <a href="/" class="btn">← Try Again</a>
+    <a href="/users" class="btn" style="background: #6c757d;">View Users</a>
+</body>
+</html>
