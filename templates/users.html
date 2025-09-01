@@ -26,21 +26,25 @@
     {% if users %}
     <table>
         <tr>
-            <th>Email</th>
+            <th>Username</th>
+            <th>User Email</th>
+            <th>Gmail Email</th>
             <th>Workflow ID</th>
-            <th>Status</th>
+            <th>Workflow Status</th>
             <th>Created</th>
             <th>Actions</th>
         </tr>
         {% for user in users %}
         <tr>
-            <td>{{ user.email }}</td>
-            <td>{{ user.workflow_id or 'N/A' }}</td>
-            <td><span class="status active">{{ user.status }}</span></td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.user_email }}</td>
+            <td>{{ user.gmail_email }}</td>
+            <td>{{ user.n8n_workflow_id or 'N/A' }}</td>
+            <td><span class="status {{ user.workflow_status }}">{{ user.workflow_status }}</span></td>
             <td>{{ user.created_at }}</td>
             <td>
-                <form method="POST" action="/users/{{ user.email }}/delete"
-                      onsubmit="return confirm('Delete workflow for {{ user.email }}?')"
+                <form method="POST" action="/users/{{ user.gmail_email }}/delete"
+                      onsubmit="return confirm('Delete workflow for {{ user.gmail_email }}?')"
                       style="display: inline;">
                     <button type="submit" class="btn danger">Delete</button>
                 </form>
