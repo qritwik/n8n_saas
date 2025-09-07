@@ -16,3 +16,10 @@ N8N_API_KEY = os.getenv("N8N_API_KEY")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 TELEGRAM_CRED_ID = os.getenv("TELEGRAM_CRED_ID")
 REDIRECT_URI = os.getenv("REDIRECT_URI")
+
+# PostgreSQL Configuration
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
